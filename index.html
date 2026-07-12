@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JMJ Fabrication Works — Tensile Structures & Steel Fabrication, Thane</title>
+  <meta name="description" content="JMJ Fabrication Works — 40+ years of expert tensile structures, structural steel fabrication, awnings & grills in Thane, Maharashtra. Trusted by Vibgyor, Ryan International, Voltas & more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:       #1B5E70;
+      --teal-dark:  #0D3D4D;
+      --teal-mid:   #236B7E;
+      --gold:       #C9A84C;
+      --gold-light: #E2C46A;
+      --steel:      #B0BEC5;
+      --off-white:  #F7F9FA;
+      --white:      #FFFFFF;
+      --text:       #1A2B30;
+      --text-mid:   #3D5560;
+      --text-light: #6B8A96;
+      --border:     #D4E4E9;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--teal-dark);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 64px;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .nav-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 800; font-size: 1.4rem;
+      color: var(--white); letter-spacing: 0.04em;
+    }
+    .nav-brand span { color: var(--gold); }
+
+    .nav-links {
+      display: flex; gap: 2rem; list-style: none;
+    }
+    .nav-links a {
+      color: var(--steel); text-decoration: none;
+      font-size: 0.875rem; font-weight: 500;
+      letter-spacing: 0.03em; text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold); color: var(--teal-dark) !important;
+      padding: 0.45rem 1.1rem; border-radius: 3px;
+      font-weight: 600 !important; transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--teal-dark) !important; }
+
+    .hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      cursor: pointer; padding: 4px;
+    }
+    .hamburger span {
+      display: block; width: 24px; height: 2px;
+      background: var(--white); border-radius: 2px;
+      transition: 0.3s;
+    }
+
+    /* ── HERO ─────────────────────────────────────── */
+    .hero {
+      margin-top: 64px;
+      min-height: calc(100vh - 64px);
+      background: linear-gradient(135deg, var(--teal-dark) 0%, var(--teal) 60%, #1E7A8C 100%);
+      display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      padding: 80px 5%;
+    }
+
+    /* Steel grid texture — subtle */
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Diagonal gold accent bar — the signature element */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 420px; height: 420px;
+      background: var(--gold);
+      opacity: 0.08;
+      border-radius: 50%;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      max-width: 700px;
+    }
+
+    .hero-eyebrow {
+      display: inline-block;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem; font-weight: 600;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold);
+      border-left: 3px solid var(--gold);
+      padding-left: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      margin-bottom: 1.25rem;
+    }
+    .hero h1 em {
+      font-style: normal;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.75);
+      max-width: 520px;
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    .hero-stats {
+      display: flex; gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .stat-item { text-align: left; }
+    .stat-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 2.4rem; font-weight: 800;
+      color: var(--gold); line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.8rem; color: rgba(255,255,255,0.6);
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    .hero-actions {
+      display: flex; gap: 1rem; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold); color: var(--teal-dark);
+      padding: 0.85rem 2rem; border-radius: 3px;
+      font-weight: 700; font-size: 0.95rem;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: background 0.2s, transform 0.15s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.35);
+      color: var(--white);
+      padding: 0.85rem 2rem; border-radius: 3px;
+      font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; letter-spacing: 0.02em;
+      transition: border-color 0.2s, background 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.08); }
+
+    /* ── TRUST STRIP ─────────────────────────────── */
+    .trust-strip {
+      background: var(--gold);
+      padding: 0.9rem 5%;
+      display: flex; align-items: center; gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .trust-strip-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 0.8rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--teal-dark); white-space: nowrap;
+    }
+    .trust-strip-divider { width: 1px; height: 20px; background: rgba(27,62,77,0.25); }
+    .trust-clients {
+      display: flex; gap: 1.5rem; flex-wrap: wrap; align-items: center;
+    }
+    .trust-clients span {
+      font-size: 0.82rem; font-weight: 600;
+      color: var(--teal-dark); letter-spacing: 0.02em;
+      opacity: 0.85;
+    }
+
+    /* ── SECTION BASE ─────────────────────────────── */
+    section { padding: 80px 5%; }
+    .section-eyebrow {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .section-title {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; color: var(--teal-dark);
+      line-height: 1.1; margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: 1rem; color: var(--text-mid);
+      max-width: 560px; line-height: 1.7;
+      margin-bottom: 3rem;
+    }
+
+    /* ── SERVICES ─────────────────────────────────── */
+    .services { background: var(--off-white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.75rem;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+      position: relative;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--teal);
+      border-radius: 4px 0 0 4px;
+      transition: background 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 8px 24px rgba(27,94,112,0.12);
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+    .service-card:hover::before { background: var(--gold); }
+
+    .service-icon {
+      font-size: 2rem; margin-bottom: 0.9rem;
+      display: block;
+    }
+    .service-card h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--teal-dark); margin-bottom: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+    .service-card p {
+      font-size: 0.875rem; color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* ── ABOUT ────────────────────────────────────── */
+    .about { background: var(--white); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+
+    .about-credentials {
+      margin-top: 2rem;
+      display: flex; flex-direction: column; gap: 0.75rem;
+    }
+    .credential {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+    }
+    .credential-icon {
+      width: 36px; height: 36px; border-radius: 3px;
+      background: var(--teal); color: var(--white);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .credential-text strong {
+      display: block; font-size: 0.9rem;
+      color: var(--teal-dark); font-weight: 600;
+    }
+    .credential-text span {
+      font-size: 0.8rem; color: var(--text-light);
+    }
+
+    .about-visual {
+      background: var(--teal);
+      border-radius: 4px;
+      padding: 3rem;
+      color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .about-visual::before {
+      content: '';
+      position: absolute; bottom: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border: 40px solid rgba(201,168,76,0.15);
+      border-radius: 50%;
+    }
+    .about-big-num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 6rem; font-weight: 800;
+      color: var(--gold); line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+    .about-big-label {
+      font-size: 1.1rem; color: rgba(255,255,255,0.8);
+      margin-bottom: 2.5rem;
+    }
+    .about-facts {
+      display: flex; flex-direction: column; gap: 1.25rem;
+    }
+    .about-fact {
+      border-top: 1px solid rgba(255,255,255,0.15);
+      padding-top: 1.25rem;
+    }
+    .about-fact-val {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--gold);
+    }
+    .about-fact-key {
+      font-size: 0.85rem; color: rgba(255,255,255,0.65);
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+
+    /* ── CLIENTS ──────────────────────────────────── */
+    .clients { background: var(--off-white); }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .client-cell {
+      background: var(--white);
+      padding: 1.5rem;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700; font-size: 1rem;
+      color: var(--teal-dark);
+      letter-spacing: 0.03em;
+      transition: background 0.2s, color 0.2s;
+      min-height: 80px;
+    }
+    .client-cell:hover { background: var(--teal); color: var(--white); }
+
+    /* ── CERTIFICATIONS ───────────────────────────── */
+    .certs { background: var(--teal-dark); padding: 60px 5%; }
+    .certs-inner {
+      display: flex; align-items: center;
+      gap: 3rem; flex-wrap: wrap;
+    }
+    .certs-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.8rem; font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); white-space: nowrap;
+    }
+    .certs-list {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+    }
+    .cert-badge {
+      display: flex; align-items: center; gap: 0.6rem;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 3px;
+      padding: 0.6rem 1rem;
+    }
+    .cert-badge-icon { font-size: 1.2rem; }
+    .cert-badge-text strong {
+      display: block; font-size: 0.85rem;
+      color: var(--white); font-weight: 600;
+    }
+    .cert-badge-text small {
+      font-size: 0.7rem; color: var(--steel);
+    }
+
+    /* ── CONTACT ──────────────────────────────────── */
+    .contact { background: var(--white); }
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
+    }
+
+    .contact-details { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 2rem; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+    }
+    .contact-item-icon {
+      width: 42px; height: 42px;
+      background: var(--teal); color: var(--white);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .contact-item-text strong {
+      display: block; font-size: 0.8rem;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-light); margin-bottom: 2px;
+    }
+    .contact-item-text a, .contact-item-text span {
+      font-size: 0.95rem; color: var(--teal-dark);
+      font-weight: 500; text-decoration: none;
+    }
+    .contact-item-text a:hover { color: var(--gold); }
+
+    /* Inquiry form */
+    .inquiry-form {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+    .inquiry-form h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem; font-weight: 700;
+      color: var(--teal-dark); margin-bottom: 1.5rem;
+    }
+    .form-group { margin-bottom: 1rem; }
+    .form-group label {
+      display: block; font-size: 0.8rem; font-weight: 600;
+      color: var(--text-mid); text-transform: uppercase;
+      letter-spacing: 0.06em; margin-bottom: 0.4rem;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: var(--white);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--teal); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      background: var(--teal);
+      color: var(--white);
+      border: none; border-radius: 3px;
+      padding: 0.9rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      cursor: pointer; margin-top: 0.5rem;
+      transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--teal-dark); }
+
+    /* ── FOOTER ───────────────────────────────────── */
+    footer {
+      background: var(--teal-dark);
+      color: rgba(255,255,255,0.65);
+      padding: 3rem 5% 2rem;
+      border-top: 2px solid var(--gold);
+    }
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-brand {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.5rem; font-weight: 800;
+      color: var(--white); margin-bottom: 0.75rem;
+    }
+    .footer-brand span { color: var(--gold); }
+    .footer-desc { font-size: 0.875rem; line-height: 1.7; }
+    .footer-reg {
+      margin-top: 1rem;
+      font-size: 0.75rem; color: rgba(255,255,255,0.4);
+      line-height: 1.8;
+    }
+    .footer-col h4 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 0.85rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.5rem; }
+    .footer-col ul a {
+      font-size: 0.875rem; color: rgba(255,255,255,0.6);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1.5rem;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 0.5rem;
+      font-size: 0.8rem;
+    }
+
+    /* ── WHATSAPP FLOAT ───────────────────────────── */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 20px rgba(37,211,102,0.5); }
+    .wa-float svg { width: 30px; height: 30px; fill: white; }
+
+    /* ── MOBILE ───────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 64px; left: 0; right: 0;
+        background: var(--teal-dark);
+        padding: 1.5rem 5%;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        gap: 1.25rem;
+      }
+      .hamburger { display: flex; }
+      .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
+      .about-inner, .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .certs-inner { flex-direction: column; gap: 1.5rem; }
+      .trust-strip { gap: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-brand">JMJ <span>Fabrication</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#clients">Clients</a></li>
+    <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Thane, Maharashtra — Est. 40+ Years</div>
+    <h1>Built to <em>Last.</em><br>Engineered to <em>Impress.</em></h1>
+    <p class="hero-sub">JMJ Fabrication Works delivers precision tensile structures, structural steel fabrication, awnings, grills and more — trusted by schools, builders and corporates across Mumbai and Thane.</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">40+</div>
+        <div class="stat-label">Years in Business</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">500+</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">14+</div>
+        <div class="stat-label">Major Clients</div>
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Get a Free Quote</a>
+      <a href="#services" class="btn-outline">View Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <span class="trust-strip-label">Trusted by</span>
+  <div class="trust-strip-divider"></div>
+  <div class="trust-clients">
+    <span>Vibgyor Schools</span>
+    <span>Ryan International</span>
+    <span>Navkis International</span>
+    <span>Voltas</span>
+    <span>Omkar Developers</span>
+    <span>Haware Developers</span>
+    <span>Home Centre</span>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-eyebrow">What We Build</div>
+  <div class="section-title">Our Services</div>
+  <p class="section-sub">From tensile shade structures to heavy structural steel fabrication — we handle projects of every scale with precision and durability.</p>
+
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-icon">⛺</span>
+      <h3>Tensile Structures</h3>
+      <p>Architectural tensile, conical, membrane, and fabric structures for airports, stadiums, cafeterias, pools and more.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏗️</span>
+      <h3>Structural Steel Fabrication</h3>
+      <p>Heavy and conventional structural steel, PEB structures, prefabricated buildings and galvanised steel structures.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🅿️</span>
+      <h3>Car Parking Sheds</h3>
+      <p>Durable, weather-proof car parking canopies and sheds built for residential, commercial and industrial use.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🌂</span>
+      <h3>Awnings & Canopies</h3>
+      <p>Fixed, retractable, PVC and outdoor awnings — striped, shade, restaurant and commercial canopies.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🔲</span>
+      <h3>Grills & Gates</h3>
+      <p>Custom-fabricated security grills, window grills, doors and gates for residential and commercial properties.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">☀️</span>
+      <h3>Solar Panel Mounting</h3>
+      <p>Precision-engineered solar panel mounting structures for rooftop and ground-mounted solar installations.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🏫</span>
+      <h3>Prefabricated Buildings</h3>
+      <p>Prefabricated steel school buildings, site offices and industrial structures — fast to erect and built to last.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-icon">🚶</span>
+      <h3>Walkway & Arch Structures</h3>
+      <p>Tensile walkway covers, arch roof structures, gazebos, pavilions and outdoor umbrella structures.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-eyebrow">Who We Are</div>
+      <div class="section-title">A Family Business Built on Steel</div>
+      <p style="color:var(--text-mid);line-height:1.8;margin-bottom:1.5rem;">JMJ Fabrication Works has been crafting durable, precision-engineered metal structures for over 40 years. Founded and run by the Dsouza family in Thane, we combine deep craftsmanship with modern fabrication techniques.</p>
+      <p style="color:var(--text-mid);line-height:1.8;">Proprietor <strong>Clarance Avel Henry Dsouza</strong> leads a skilled team that has delivered projects for some of India's most trusted school chains, real estate developers, and corporate brands.</p>
+
+      <div class="about-credentials">
+        <div class="credential">
+          <div class="credential-icon">🏭</div>
+          <div class="credential-text">
+            <strong>Proprietorship</strong>
+            <span>MSME Registered — Udyog Aadhaar No. MH33E0129971</span>
+          </div>
+        </div>
+        <div class="credential">
+          <div class="credential-icon">📋</div>
+          <div class="credential-text">
+            <strong>GST Registered</strong>
+            <span>GSTIN: 27ATXPD2912Q1Z0 — Regular taxpayer</span>
+          </div>
+        </div>
+        <div class="credential">
+          <div class="credential-icon">📍</div>
+          <div class="credential-text">
+            <strong>Based in Thane, Maharashtra</strong>
+            <span>Serving Mumbai, Navi Mumbai, Thane & surrounding regions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-visual">
+      <div class="about-big-num">40+</div>
+      <div class="about-big-label">Years of Fabrication Excellence</div>
+      <div class="about-facts">
+        <div class="about-fact">
+          <div class="about-fact-val">500+</div>
+          <div class="about-fact-key">Projects Delivered</div>
+        </div>
+        <div class="about-fact">
+          <div class="about-fact-val">14+</div>
+          <div class="about-fact-key">Trusted Corporate Clients</div>
+        </div>
+        <div class="about-fact">
+          <div class="about-fact-val">5</div>
+          <div class="about-fact-key">Skilled Team Members</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section class="clients" id="clients">
+  <div class="section-eyebrow">Our Clients</div>
+  <div class="section-title">Trusted by Industry Leaders</div>
+  <p class="section-sub">We are proud to have worked with some of India's leading educational institutions, real estate developers, and corporate brands.</p>
+
+  <div class="clients-grid">
+    <div class="client-cell">Vibgyor Schools</div>
+    <div class="client-cell">Ryan International</div>
+    <div class="client-cell">Navkis International</div>
+    <div class="client-cell">Unimont Builders</div>
+    <div class="client-cell">Karuna Welfare</div>
+    <div class="client-cell">HMD Architects</div>
+    <div class="client-cell">Siddhi Group</div>
+    <div class="client-cell">Balaji Group</div>
+    <div class="client-cell">Haware Developers</div>
+    <div class="client-cell">Voltas</div>
+    <div class="client-cell">Man Realty</div>
+    <div class="client-cell">Doric Infra</div>
+    <div class="client-cell">Omkar Developers</div>
+    <div class="client-cell">Home Centre</div>
+  </div>
+</section>
+
+<!-- CERTS STRIP -->
+<div class="certs">
+  <div class="certs-inner">
+    <span class="certs-label">Certified &amp; Registered</span>
+    <div class="certs-list">
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🏛️</span>
+        <div class="cert-badge-text">
+          <strong>GST Registered</strong>
+          <small>27ATXPD2912Q1Z0</small>
+        </div>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">🏭</span>
+        <div class="cert-badge-text">
+          <strong>MSME / Udyog Aadhaar</strong>
+          <small>MH33E0129971</small>
+        </div>
+      </div>
+      <div class="cert-badge">
+        <span class="cert-badge-icon">📜</span>
+        <div class="cert-badge-text">
+          <strong>Shop Act Licensed</strong>
+          <small>Maharashtra</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <div class="section-eyebrow">Get in Touch</div>
+      <div class="section-title">Request a Free Quote</div>
+      <p class="section-sub">Tell us about your project and we'll get back to you with a detailed quote. Site visits available on request.</p>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <strong>Phone</strong>
+            <a href="tel:+919967935910">+91 9967935910</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div class="contact-item-text">
+            <strong>Email</strong>
+            <a href="mailto:jmjfabricationworks@gmail.com">jmjfabricationworks@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Address</strong>
+            <span>Dsouza House, Opp. Guruprasad Society No.5,<br>Mahatma Phule Nagar, Kores Road,<br>Behind ESI Hospital, Thane (W) — 400606</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="inquiry-form">
+      <h3>Send Us an Enquiry</h3>
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="e.g. Rajesh Sharma" />
+      </div>
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 98XXXXXXXX" />
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com" />
+      </div>
+      <div class="form-group">
+        <label>Service Required</label>
+        <select>
+          <option value="">Select a service…</option>
+          <option>Tensile Structure</option>
+          <option>Structural Steel Fabrication</option>
+          <option>Car Parking Shed</option>
+          <option>Awning / Canopy</option>
+          <option>Grills & Gates</option>
+          <option>Solar Panel Mounting</option>
+          <option>Prefabricated Building</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Project Details</label>
+        <textarea placeholder="Describe your project — size, location, requirements…"></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit()">Send Enquiry →</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">JMJ <span>Fabrication</span> Works</div>
+      <p class="footer-desc">40+ years of precision fabrication — tensile structures, structural steel, awnings, grills and more. Serving Mumbai, Thane, and Navi Mumbai.</p>
+      <div class="footer-reg">
+        GST: 27ATXPD2912Q1Z0 &nbsp;|&nbsp; MSME: MH33E0129971<br>
+        Proprietor: Clarance Avel Henry Dsouza
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Tensile Structures</a></li>
+        <li><a href="#services">Structural Fabrication</a></li>
+        <li><a href="#services">Car Parking Sheds</a></li>
+        <li><a href="#services">Awnings & Canopies</a></li>
+        <li><a href="#services">Grills & Gates</a></li>
+        <li><a href="#services">Solar Mounting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+919967935910">+91 9967935910</a></li>
+        <li><a href="mailto:jmjfabricationworks@gmail.com">jmjfabricationworks@gmail.com</a></li>
+        <li><a href="#contact">Get a Free Quote</a></li>
+      </ul>
+      <h4 style="margin-top:1.5rem;">Address</h4>
+      <p style="font-size:0.8rem;color:rgba(255,255,255,0.5);line-height:1.7;">Dsouza House, Opp. Guruprasad Society No.5, Mahatma Phule Nagar, Kores Road, Thane (W) 400606</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 JMJ Fabrication Works. All rights reserved.</span>
+    <span>Thane, Maharashtra, India</span>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/919967935910?text=Hi%20JMJ%20Fabrication%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+
+  function handleSubmit() {
+    const btn = document.querySelector('.form-submit');
+    btn.textContent = '✓ Enquiry Sent!';
+    btn.style.background = '#2E7D32';
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry →';
+      btn.style.background = '';
+    }, 3000);
+  }
+
+  // Smooth scroll close menu on link click
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+</body>
+</html>
